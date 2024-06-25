@@ -38,6 +38,10 @@ jobs:
             echo "HTML tag <title> not found"
             exit 1
           fi
+          if ! grep -q '<body' index.html; then
+            echo "HTML tag <body> not found"
+            exit 1
+          fi
           if ! grep -q '<header' index.html; then
             echo "HTML tag <header> not found"
             exit 1
